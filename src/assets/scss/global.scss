@@ -1,0 +1,173 @@
+@use './media';
+
+:root {
+  // Global
+  --color-text: #{$color-text};
+  --color-sub-text: #{$color-sub-text};
+
+  --color-header: #{$color-header};
+  --color-header-bg: #{$color-header-bg};
+  --color-header-icon: #{$color-header-icon};
+
+  --color-highlight: #{$color-highlight};
+
+  --color-background: #{$color-background};
+  --color-background-content: #{$color-background-content};
+  --color-background-highlight: #{$color-background-highlight};
+
+  --color-input-bg: #{$color-input-bg};
+  --color-input-shadow: #{$color-input-shadow};
+  --color-input-border: #{$color-input-border};
+
+  --color-border: #{$color-border};
+  --color-disabled: #{$color-disabled};
+  --color-toast-bg: #{$color-toast-bg};
+
+  --color-button-bg: #{$color-button-bg};
+  --color-button-bg-hover: #{$color-button-bg-hover};
+
+  --ripple-opacity: #{$ripple-opacity};
+  --ripple-duration: #{$ripple-duration};
+  --ripple-easing: #{$ripple-easing};
+  --ripple-background: #{$ripple-background};
+
+  --ripple-icon-opacity: #{$ripple-icon-opacity};
+  --ripple-icon-duration: #{$ripple-icon-duration};
+  --ripple-icon-easing: #{$ripple-icon-easing};
+  --ripple-icon-background: #{$ripple-icon-background};
+
+  // Others
+  --color-error: #ff4e2f;
+  --color-success: #00a329;
+  --color-warn: #ceff2f;
+
+  --color-cart-add: #00be30;
+
+  --color-link: #70a1f0;
+  --color-link-hover: #4583e7;
+
+  --color-submit-bg: #7289da;
+  --color-submit-bg-hover: #5468b1;
+
+  // Header
+  --header-height: 56px;
+  --header-button-hover: #272727;
+  --status-bar-highlight-color: #ef4444;
+  --offline-notification-height: 20px;
+  --header-content-padding: calc(var(--header-height) + 20px);
+
+  // Footer
+  --footer-content-height: 20px;
+  --content-padding: 5px;
+  --footer-height: calc(var(--footer-content-height) + 2 * var(--content-padding));
+  --footer-content-padding: calc(var(--footer-height) + 10px);
+
+  // Sidebar
+  --sidebar-width: 300px;
+
+  @include media.mobile {
+    --footer-content-height: 40px;
+  }
+}
+
+html[data-theme='dark'] {
+  --color-text: #{$color-text-dark};
+  --color-sub-text: #{$color-sub-text-dark};
+  --color-header: #{$color-header-dark};
+  --color-header-bg: #{$color-header-bg-dark};
+  --color-header-icon: #{$color-header-icon-dark};
+
+  --color-highlight: #{$color-highlight-dark};
+
+  --color-background: #{$color-background-dark};
+  --color-background-content: #{$color-background-content-dark};
+  --color-background-highlight: #{$color-background-highlight-dark};
+
+  --color-input-bg: #{$color-input-bg-dark};
+  --color-input-shadow: #{$color-input-shadow-dark};
+  --color-input-border: #{$color-input-border-dark};
+
+  --color-border: #{$color-border-dark};
+  --color-disabled: #{$color-disabled-dark};
+  --color-toast-bg: #{$color-toast-bg-dark};
+
+  --color-button-bg: #{$color-button-bg-dark};
+  --color-button-bg-hover: #{$color-button-bg-hover-dark};
+
+  --ripple-background: #{$ripple-background-dark};
+}
+
+html[data-theme='blue'] {
+  --color-text: #{$color-text-blue};
+  --color-sub-text: #{$color-sub-text-blue};
+  --color-header: #{$color-header-blue};
+  --color-header-bg: #{$color-header-bg-blue};
+  --color-header-icon: #{$color-header-icon-blue};
+
+  --color-highlight: #{$color-highlight-blue};
+
+  --color-background: #{$color-background-blue};
+  --color-background-content: #{$color-background-content-blue};
+  --color-background-highlight: #{$color-background-highlight-blue};
+
+  --color-input-bg: #{$color-input-bg-blue};
+  --color-input-shadow: #{$color-input-shadow-blue};
+  --color-input-border: #{$color-input-border-blue};
+
+  --color-border: #{$color-border-blue};
+  --color-disabled: #{$color-disabled-blue};
+  --color-toast-bg: #{$color-toast-bg-blue};
+
+  --color-button-bg: #{$color-button-bg-blue};
+  --color-button-bg-hover: #{$color-button-bg-hover-blue};
+
+  --ripple-background: #{$ripple-background-blue};
+}
+
+html {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+body {
+  background-color: var(--primary-block-color);
+  color: var(--primary-text-color);
+  font-size: #{$font-size-base};
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: fixed;
+}
+
+#__next {
+  background-color: var(--background-color);
+}
+
+// Scrollbar color
+::-webkit-scrollbar {
+  width: 5px;
+  height: 100%;
+  background: var(--color-background-highlight);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #c1c1c1;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  // background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  background-color: transparent;
+}

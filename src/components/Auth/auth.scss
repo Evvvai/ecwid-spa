@@ -1,0 +1,132 @@
+.auth-errors-tg-item {
+  margin-right: 10px;
+  transform-origin: 0 0;
+}
+
+.auth-errors-tg-enter-active,
+.auth-errors-tg-leave-active {
+  transition: all 0.4s ease;
+}
+
+.auth-errors-tg-enter-from,
+.auth-errors-tg-leave-to {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.auth-errors-tg-move {
+  transition: transform 0.4s ease;
+}
+
+.auth {
+  min-width: 400px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 40%);
+
+  @include mobile {
+    min-width: 300px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    padding-bottom: 60px;
+    background-color: var(--color-background-content);
+    border-top: 3px solid var(--color-highlight);
+    width: 100%;
+  }
+}
+
+.auth-header {
+  &__title {
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 300;
+    margin: 0;
+  }
+}
+
+.auth-errors {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--color-error);
+  padding: 10px 0;
+
+  &__text {
+    color: var(--color-error);
+  }
+}
+
+.auth-form {
+  width: 100%;
+  .form-group {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 10px 0;
+
+    &.additional {
+      font-size: 0.8rem;
+      flex-direction: row;
+      align-items: flex-end;
+
+      div {
+        cursor: pointer;
+      }
+    }
+
+    &__reset {
+      text-decoration: none;
+      color: var(--color-link);
+      &:hover {
+        color: var(--color-link-hover);
+      }
+    }
+
+    &__submit {
+      cursor: pointer;
+      border: 0px;
+      background-color: var(--color-submit-bg);
+      width: 100%;
+      height: 40px;
+      font-weight: 300;
+      color: var(--color-text);
+
+      &:hover {
+        background-color: var(--color-submit-bg-hover);
+      }
+    }
+  }
+}
+
+.auth-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--color-background-highlight);
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  height: 40px;
+  width: 100%;
+
+  &__title {
+  }
+
+  &__button {
+    cursor: pointer;
+    border: 0px;
+    background-color: transparent;
+    color: var(--color-link);
+    &:hover {
+      color: var(--color-link-hover);
+    }
+  }
+}
